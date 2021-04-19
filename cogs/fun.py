@@ -17,9 +17,9 @@ from random import randint
 deletable_messages = []
 
 reddit = praw.Reddit(
-    client_id="HAxYEEaJLW7WTw",
-    client_secret="9tU5KIkhWGhCPcJRjm0sp5nke6j5SA",
-    user_agent="Alert_Techy".replace("-", " "),
+    client_id=config('REDDIT_CLIENT_ID'),
+    client_secret=config('REDDIT_CLIENT_SECRET'),
+    user_agent=config('REDDIT_USER_AGENT').replace("-", " "),
     check_for_async=False
 )
 
@@ -35,7 +35,7 @@ class Fun(commands.Cog):
     async def gif(self, ctx):
         q = ctx.message.content[5:]
         # set the apikey and limit
-        apikey = "ZTN2VOF3EVVJ"  # test value
+        apikey = config('TENOR_KEY')  # test value
         lmt = 10
 
         # our test search

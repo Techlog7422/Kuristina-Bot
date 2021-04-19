@@ -2,6 +2,7 @@ import discord
 import os
 from discord.ext import commands, tasks
 from itertools import cycle
+from decouple import config
 
 intents = discord.Intents.default()
 intents.members = True
@@ -53,4 +54,4 @@ for filename in os.listdir('./cogs'):
 #     e.set_image(url='https://media.tenor.com/images/ce68656c54f859c5786d62ff93bc8ebf/tenor.gif')
 #     await channel.send(embed=e)
 
-client.run('ODA0Mjk0ODIxOTI1MDkzNDA3.YBKP7A.Cp4mLyr39O9HYYk4QwmQXjhqr_o')
+client.run(config('SECRET_KEY'))

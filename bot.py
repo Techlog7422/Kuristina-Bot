@@ -54,4 +54,4 @@ for filename in os.listdir('./cogs'):
 #     e.set_image(url='https://media.tenor.com/images/ce68656c54f859c5786d62ff93bc8ebf/tenor.gif')
 #     await channel.send(embed=e)
 
-client.run(config('SECRET_KEY'))
+client.run('ODA0Mjk0ODIxOTI1MDkzNDA3.YBKP7A.n0zFVpBZh2LeStNEfQU9a0_faYs')

@@ -2,4 +2,6 @@ kurisu-bot/
 
 __pycache__
 
-.ini
+.env
+
+cogs\__pycache__

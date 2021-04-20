@@ -7,7 +7,7 @@ from decouple import config
 intents = discord.Intents.default()
 intents.members = True
 client = commands.Bot(command_prefix = ['k+', 'K+'], case_insensitive=True, help_command=None, intents=intents)
-status = cycle(['Hacking To The Gate', 'Its not Tina'])
+status = cycle(['Hacking To The Gate', 'I told you before its not Tina'])
 
 @client.event
 async def on_ready():

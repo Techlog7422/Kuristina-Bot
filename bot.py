@@ -12,15 +12,7 @@ status = cycle(['Hacking To The Gate', 'I told you before its not Tina'])
 @client.event
 async def on_ready():
     change_status.start()
-    # await client.change_presence(status=discord.Status.online,  activity=discord.Game('Hacking To The Gate'))
     print("bot is ready")
-
-# @client.event
-# async def on_command_error(ctx, error):
-#     if isinstance(error, commands.MissingRequiredArgument):
-#         await ctx.send('Please pass the required arguments.')
-#     if isinstance(error, commands.CommandNotFound):
-#         await ctx.send('Invalid command twat')
 
 @tasks.loop(seconds=10)
 async def change_status():
@@ -42,16 +34,5 @@ async def reload(ctx, extension):
 for filename in os.listdir('./cogs'):
     if filename.endswith('.py'):
         client.load_extension(f'cogs.{filename[:-3]}')
-
-#Public Welcome
-# @client.event
-# async def on_member_join(member):
-#     guild = client.get_guild()
-#     channel = client.get_channel()
-
-#     e = discord.Embed(title='', color=0xFF0055)
-#     e.add_field(name='WELL CUM', value=f'Welcome to the server {member.mention}')
-#     e.set_image(url='https://media.tenor.com/images/ce68656c54f859c5786d62ff93bc8ebf/tenor.gif')
-#     await channel.send(embed=e)
 
 client.run(config('SECRET_KEY'))
